@@ -9,3 +9,11 @@ class Tahanan: #class untuk menyimpan data setiap tahanan
         self.hukuman = hukuman # menyimpan lama hukuman tahanan
         self.bahaya = bahaya   # menyimpan tingkat bahaya tahanan
         
+        # TUPLE
+        self.identitas = (
+            id_tahanan, 
+            nama
+        )
+
+        # SET
+        self.pelanggaran = set()

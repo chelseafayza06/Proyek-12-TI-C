@@ -35,11 +35,15 @@ while True:
     print("9. Tampilkan Graph")
     print("10. Simpan File")
     print("11. Tree Penjara")
-    print("12. Keluar")
-
+    print("12. Tambah Pelanggaran")
+    print("13. Lihat Pelanggaran")
+    print("14. Lihat Identitas Tetap")
+    print("15. Keluar")
     pilih = input("Pilih menu : ")
 
-
+    # =====================================
+    # INPUT DATA TAHANAN 
+    # =====================================
     if pilih == "1":
 
         while True:
@@ -145,12 +149,17 @@ while True:
 
         print("Tahanan berhasil ditambahkan")
 
-
+    # =====================================
+    # MENAMPILKAN DATA TAHANAN
+    # =====================================
     elif pilih == "2":
 
         data_tahanan.tampilkan()
 
 
+    # =====================================
+    # CARI TAHANAN
+    # =====================================
     elif pilih == "3":
 
         target = input("Masukkan ID : ")
@@ -169,10 +178,12 @@ while True:
 
             print("Data tidak ditemukan")
 
-
+    # =====================================
+    # SORTING - URUTKAN DATA TAHANAN
+    # =====================================
     elif pilih == "4":
 
-        data = data_tahanan.ubah_jadi_list()
+        data = data_tahanan.ubah_jadi_list() # ubah single linked list jd list biasa
 
         bubble_sort_nama(data)
 
@@ -182,7 +193,9 @@ while True:
 
             print(data[i].nama)
 
-
+    # =====================================
+    # QUEUE - INPUT ANTRIAN
+    # =====================================
     elif pilih == "5":
 
         nama = input("Nama antrean : ")
@@ -191,7 +204,9 @@ while True:
 
         print("Antrean berhasil ditambahkan")
 
-
+    # =====================================
+    # QUEUE - ANTRIAN PELAYANAN PENGUNJUNG
+    # =====================================
     elif pilih == "6":
 
         hasil = antrean.dequeue()
@@ -204,12 +219,16 @@ while True:
 
             print("Antrean kosong")
 
-
+    # =====================================
+    # SET - TAMBAH PELANGGARAN
+    # =====================================
     elif pilih == "7":
 
         riwayat.tampilkan()
 
-
+    # =====================================
+    # GRAPH - INPUT HUB ANTAR TAHANAN
+    # =====================================
     elif pilih == "8":
 
         a = input("Tahanan 1 : ")
@@ -220,17 +239,23 @@ while True:
 
         print("Hubungan berhasil ditambahkan")
 
-
+    # =====================================
+    # GRAPH - MENAMPILKAN HUB ANTAR TAHANAN
+    # =====================================
     elif pilih == "9":
 
         graph.tampilkan()
 
-
+    # =====================================
+    # FILE HANDLER - MENYIMPAN FILE KE TXT
+    # =====================================
     elif pilih == "10":
 
         simpan_file(data_tahanan)
 
-
+    # =====================================
+    # TREE - PEMBAGIAN BLOK DAN SEL PENJARA
+    # =====================================
     elif pilih == "11":
 
         root = TreeNode("Penjara")
@@ -247,7 +272,86 @@ while True:
         tampil_tree(root)
 
 
+
+    # =====================================
+    # SET - TAMBAH PELANGGARAN
+    # =====================================
+
     elif pilih == "12":
+
+        target = input("Masukkan ID Tahanan : ")
+
+        tahanan = hash_table.search(target)
+
+        if tahanan is not None:
+
+            pelanggaran = input("Masukkan Pelanggaran : ")
+
+            tahanan.pelanggaran.add(pelanggaran)
+
+            print("Pelanggaran berhasil ditambahkan")
+
+        else:
+
+            print("Tahanan tidak ditemukan")
+
+
+    # =====================================
+    # SET - LIHAT PELANGGARAN
+    # =====================================
+
+    elif pilih == "13":
+
+        target = input("Masukkan ID Tahanan : ")
+
+        tahanan = hash_table.search(target)
+
+        if tahanan is not None:
+
+            print("\n=== DAFTAR PELANGGARAN ===")
+
+            if len(tahanan.pelanggaran) == 0:
+
+                print("Belum ada pelanggaran")
+
+            else:
+
+                for data in tahanan.pelanggaran:
+
+                    print("-", data)
+
+        else:
+
+            print("Tahanan tidak ditemukan")
+
+
+    # =====================================
+    # TUPLE - IDENTITAS TETAP
+    # =====================================
+
+    elif pilih == "14":
+
+        target = input("Masukkan ID Tahanan : ")
+
+        tahanan = hash_table.search(target)
+
+        if tahanan is not None:
+
+            print("\n=== IDENTITAS TETAP ===")
+
+            print("ID   :", tahanan.identitas[0])
+            print("Nama :", tahanan.identitas[1])
+
+        else:
+
+            print("Tahanan tidak ditemukan")
+
+
+    # =====================================
+    # KELUAR
+    # =====================================
+
+    elif pilih == "15":
 
         print("Program selesai")
         break
