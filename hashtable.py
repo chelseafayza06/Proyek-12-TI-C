@@ -19,7 +19,7 @@ class HashTable:
         return total % self.ukuran  # Mengembalikan index hasil hash menggunakan modulo
 
 
-    def insert(self, key, value):    Method untuk menambahkan data ke Hash Table
+    def insert(self, key, value):    #Method untuk menambahkan data ke Hash Table
 
         index = self.hash_function(key)    # Menentukan index berdasarkan hasil hash key
 
