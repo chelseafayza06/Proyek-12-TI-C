@@ -9,7 +9,7 @@ def simpan_file(linkedlist):     # Fungsi untuk menyimpan data ke file
         data = sekarang.data     # Mengambil data tahanan dari node saat ini
 
 
-     # Menggabungkan seluruh atribut menjadi satu baris teks
+    # Menggabungkan seluruh atribut menjadi satu baris teks
     # dengan pemisah koma (,)
         teks = (
             data.id + "," +
