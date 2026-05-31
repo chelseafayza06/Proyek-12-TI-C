@@ -24,7 +24,7 @@ riwayat = Stack()                # Menyimpan riwayat aktivitas
 
 antrean = Queue()                # Menyimpan antrean pengunjung
 
-hash_table = HashTable(10)       # Mempercepat pencarian tahanan berdasarkan ID
+hash_table = HashTable(1000)       # Mempercepat pencarian tahanan berdasarkan ID
 
 graph = Graph()                  # Menyimpan hubungan antar tahanan
 

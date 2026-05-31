@@ -54,7 +54,6 @@ class LinkedList:
     # Menampilkan seluruh data tahanan
     # yang tersimpan dalam Linked List
     # =====================================
-
     def tampilkan(self):
         # Mulai dari node pertama
         sekarang = self.head
@@ -67,7 +66,6 @@ class LinkedList:
 
         # Traversal seluruh node
         while sekarang is not None:
-
             data = sekarang.data
 
             print("========================")
@@ -88,7 +86,7 @@ class LinkedList:
     # diproses oleh algoritma Bubble Sort
     # =====================================
 
-    def ambil_ke_list(self):
+    def ubah_jadi_list(self):
         # Menampung seluruh data tahanan
         hasil = []
 

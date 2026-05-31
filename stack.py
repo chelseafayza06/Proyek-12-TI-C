@@ -2,7 +2,6 @@
 # Prinsip kerja: LIFO (Last In First Out)
 # Data yang terakhir masuk akan ditampilkan lebih dulu.
 
-
 # Node untuk menyimpan satu data aktivitas
 class StackNode:
 
@@ -10,8 +9,6 @@ class StackNode:
 
         self.data = data # menyimpan isi aktivitas atau datanya 
         self.next = None # menunjuk ke node berikutnya
-
-
 
 class Stack: # membuat struktur data Stack.
 
