@@ -1,4 +1,4 @@
-1234,Reva,Pencurian,5,Sedang
-4567,Chelsea,Pencemaran Nama Baik secara langsung,1,Tidak diketahui
-0000,Miracle,Bullying,4,Rendah
-0001,Luthfi,KDRT,3,Rendah
+0001,Chelsea,Pembunuhan,20,Tinggi
+0002,Reva,Bullying,4,Rendah
+0003,Miracle,KDRT,3,Rendah
+0004,Nathan,Korupsi,15,Tinggi

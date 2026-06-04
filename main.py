@@ -8,6 +8,7 @@ from linkedlist import LinkedList        # Single Linked List
 from stack import Stack                  # Stack
 from queue import Queue                  # Queue
 from sorting import bubble_sort_nama     # Bubble Sort
+from searching import linear_search_nama # Linear Search 
 from hashtable import HashTable          # Hash Table
 from graph import Graph                  # Graph
 from tree import *                       # Tree
@@ -39,19 +40,20 @@ while True:
     print("\n===== SISTEM SIMULASI PENJARA DIGITAL =====")
     print("1. Tambah Tahanan")
     print("2. Tampilkan Tahanan")
-    print("3. Cari Tahanan")
-    print("4. Urutkan Nama")
-    print("5. Tambah Antrean")
-    print("6. Layani Antrean")
-    print("7. Riwayat Aktivitas")
-    print("8. Tambah Hubungan")
-    print("9. Tampilkan Graph")
-    print("10. Simpan File")
-    print("11. Tree Penjara")
-    print("12. Tambah Pelanggaran")
-    print("13. Lihat Pelanggaran")
-    print("14. Lihat Identitas Tetap")
-    print("15. Keluar")
+    print("3. Cari Tahanan Berdasarkan ID")
+    print("4. Cari Tahanan Berdasarkan Nama")
+    print("5. Urutkan Nama")
+    print("6. Tambah Antrean")
+    print("7. Layani Antrean")
+    print("8. Riwayat Aktivitas")
+    print("9. Tambah Hubungan")
+    print("10. Tampilkan Graph")
+    print("11. Simpan File")
+    print("12. Tree Penjara")
+    print("13. Tambah Pelanggaran")
+    print("14. Lihat Pelanggaran")
+    print("15. Lihat Identitas Tetap")
+    print("16. Keluar")
 
     pilih = input("Pilih menu : ")
 
@@ -168,7 +170,7 @@ while True:
         data_tahanan.tampilkan()
 
     # ===================================================
-    # MENU 3 - MENCARI TAHANAN DENGAN HASH TABLE
+    # MENU 3 - MENCARI TAHANAN BERDASARKAN ID
     # ===================================================
     elif pilih == "3":
 
@@ -190,9 +192,32 @@ while True:
             print("Data tidak ditemukan")
 
     # ===================================================
-    # MENU 4 - SORTING NAMA TAHANAN
+    # MENU 4 - LINEAR SEARCH CARI TAHANAN BERDASARKAN NAMA
     # ===================================================
     elif pilih == "4":
+
+        target = input("Masukkan Nama Tahanan : ")
+
+        hasil = linear_search_nama(data_tahanan, target)
+
+        if hasil is not None:
+
+            print("\n=== DATA DITEMUKAN ===")
+            print("ID      :", hasil.id)
+            print("Nama    :", hasil.nama)
+            print("Kasus   :", hasil.kasus)
+            print("Hukuman :", hasil.hukuman)
+            print("Bahaya  :", hasil.bahaya)
+
+        else:
+
+            print("Data tidak ditemukan")
+
+
+    # ===================================================
+    # MENU 5 - SORTING NAMA TAHANAN
+    # ===================================================
+    elif pilih == "5":
 
         # Linked List diubah menjadi list biasa
         data = data_tahanan.ubah_jadi_list()
@@ -203,12 +228,14 @@ while True:
         print("\n=== HASIL SORTING ===")
 
         for i in range(len(data)):
+
             print(data[i].nama)
 
+
     # ===================================================
-    # MENU 5 - MENAMBAH ANTREAN PENGUNJUNG
+    # MENU 6 - MENAMBAH ANTREAN PENGUNJUNG
     # ===================================================
-    elif pilih == "5":
+    elif pilih == "6":
 
         nama = input("Nama antrean : ")
 
@@ -217,31 +244,35 @@ while True:
 
         print("Antrean berhasil ditambahkan")
 
+
     # ===================================================
-    # MENU 6 - MELAYANI ANTREAN
+    # MENU 7 - MELAYANI ANTREAN
     # ===================================================
-    elif pilih == "6":
+    elif pilih == "7":
 
         # Mengambil antrean pertama (FIFO)
         hasil = antrean.dequeue()
 
         if hasil is not None:
+
             print(hasil, "dilayani")
+
         else:
+
             print("Antrean kosong")
 
+
     # ===================================================
-    # MENU 7 - MENAMPILKAN RIWAYAT AKTIVITAS
+    # MENU 8 - MENAMPILKAN RIWAYAT AKTIVITAS
     # ===================================================
-    elif pilih == "7":
+    elif pilih == "8":
 
         # Menampilkan isi Stack
         riwayat.tampilkan()
-
     # ===================================================
-    # MENU 8 - MENAMBAHKAN HUBUNGAN ANTAR TAHANAN
+    # MENU 9 - MENAMBAHKAN HUBUNGAN ANTAR TAHANAN
     # ===================================================
-    elif pilih == "8":
+    elif pilih == "9":
 
         a = input("Tahanan 1 : ")
         b = input("Tahanan 2 : ")
@@ -252,24 +283,24 @@ while True:
         print("Hubungan berhasil ditambahkan")
 
     # ===================================================
-    # MENU 9 - MENAMPILKAN GRAPH
+    # MENU 10 - MENAMPILKAN GRAPH
     # ===================================================
-    elif pilih == "9":
+    elif pilih == "10":
 
         # Menampilkan hubungan antar tahanan
         graph.tampilkan()
 
     # ===================================================
-    # MENU 10 - MENYIMPAN DATA KE FILE TXT
+    # MENU 11 - MENYIMPAN DATA KE FILE TXT
     # ===================================================
-    elif pilih == "10":
+    elif pilih == "11":
 
         simpan_file(data_tahanan)
 
     # ===================================================
-    # MENU 11 - MENAMPILKAN TREE PENJARA
+    # MENU 12 - MENAMPILKAN TREE PENJARA
     # ===================================================
-    elif pilih == "11":
+    elif pilih == "12":
 
         # Root Tree
         root = TreeNode("Penjara")
@@ -289,9 +320,9 @@ while True:
         tampil_tree(root)
 
     # ===================================================
-    # MENU 12 - MENAMBAHKAN PELANGGARAN (SET)
+    # MENU 13 - MENAMBAHKAN PELANGGARAN (SET)
     # ===================================================
-    elif pilih == "12":
+    elif pilih == "13":
 
         target = input("Masukkan ID Tahanan : ")
 
@@ -311,9 +342,9 @@ while True:
             print("Tahanan tidak ditemukan")
 
     # ===================================================
-    # MENU 13 - MENAMPILKAN PELANGGARAN
+    # MENU 14 - MENAMPILKAN PELANGGARAN
     # ===================================================
-    elif pilih == "13":
+    elif pilih == "14":
 
         target = input("Masukkan ID Tahanan : ")
 
@@ -339,9 +370,9 @@ while True:
             print("Tahanan tidak ditemukan")
 
     # ===================================================
-    # MENU 14 - MENAMPILKAN IDENTITAS TETAP (TUPLE)
+    # MENU 15 - MENAMPILKAN IDENTITAS TETAP (TUPLE)
     # ===================================================
-    elif pilih == "14":
+    elif pilih == "15":
 
         target = input("Masukkan ID Tahanan : ")
 
@@ -360,9 +391,9 @@ while True:
             print("Tahanan tidak ditemukan")
 
     # ===================================================
-    # MENU 15 - KELUAR PROGRAM
+    # MENU 16 - KELUAR PROGRAM
     # ===================================================
-    elif pilih == "15":
+    elif pilih == "16":
 
         print("Program selesai")
         break
