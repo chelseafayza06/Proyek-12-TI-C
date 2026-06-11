@@ -22,7 +22,7 @@ def tentukan_hukuman(kasus): # Fungsi untuk menentukan kasus kejahatan dan lama 
         return 3 # jika pelaku melakukan KDRT maka akan dihukum selama 3 tahun
 
     elif kasus == "Pencemaran Nama Baik secara langsung":
-        return 1 # jika pelaku melakukan pencemaran nama baik langsung maka akan dihukum selama 1 tahun
+        return 2 # jika pelaku melakukan pencemaran nama baik langsung maka akan dihukum selama 1 tahun
 
     elif kasus == "Pencemaran Nama Baik di Media Sosial":
         return 6 # jika pelaku melakukan pencemaran nama baik di sosmed maka akan dihukum selama 6 tahun

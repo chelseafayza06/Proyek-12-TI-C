@@ -34,7 +34,7 @@ graph = Graph()                  # Menyimpan hubungan antar tahanan
 # PROGRAM UTAMA
 # =========================================
 
-while True:
+while True: 
 
     # Menampilkan menu utama
     print("\n===== SISTEM SIMULASI PENJARA DIGITAL =====")
@@ -255,7 +255,7 @@ while True:
 
         if hasil is not None:
 
-            print(hasil, "dilayani")
+            print(hasil, "Telah dilayani")
 
         else:
 

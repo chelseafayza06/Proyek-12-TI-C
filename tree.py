@@ -1,16 +1,13 @@
 # =========================================
 # TREE
 # Digunakan untuk merepresentasikan struktur
-# hierarki penjara dari tingkat tertinggi
-# hingga tingkat terendah.
+# hierarki sel penjara.
 # =========================================
 
 class TreeNode: # membuat satu node pada Tree
 
     def __init__(self, nama):
-
         self.nama = nama  # menyimpan nama node
-
         self.child1 = None # anak/cabang pertama
         self.child2 = None  # anak/cabang kedua
 

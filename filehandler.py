@@ -8,8 +8,6 @@ def simpan_file(linkedlist):     # Fungsi untuk menyimpan data ke file
 
         data = sekarang.data     # Mengambil data tahanan dari node saat ini
 
-
-
         teks = (
             data.id + "," +
             data.nama + "," +

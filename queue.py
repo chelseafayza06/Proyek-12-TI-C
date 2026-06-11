@@ -1,5 +1,5 @@
 # =====================================
-# QUEUE MANUAL
+# QUEUE 
 # Digunakan untuk mengelola antrean
 # layanan dalam sistem penjara digital
 # dengan prinsip FIFO (First In First Out)
