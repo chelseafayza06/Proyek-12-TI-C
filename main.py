@@ -162,7 +162,7 @@ while True:
         print("Tahanan berhasil ditambahkan")
 
     # ===================================================
-    # MENU 2 - MENAMPILKAN DATA TAHANAN
+    # MENU 2 - MENAMPILKAN DATA TAHANAN 
     # ===================================================
     elif pilih == "2":
 
@@ -403,4 +403,4 @@ while True:
     # ===================================================
     else:
 
-        print("Menu tidak tersedia")
+        print("Maaf, menu tidak tersedia")
